@@ -1,0 +1,289 @@
+.top{
+    display: flex;
+    min-height: 100vb;
+    background: rgb(0, 0, 0);
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+   }
+.logo-img {
+    height: 50px;
+    float: left;
+   }
+
+.contact{
+    position: relative;
+    min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(https://c1.wallpaperflare.com/preview/167/210/341/book-dark-page-open.jpg);
+    background-size: cover;
+
+}
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #ffff;
+}
+.contact .content p {
+    font-weight: 300;
+    color: #ffff;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+}
+
+
+.container .contactInfo .box{
+    position: relative;
+    padding: 15px 0;
+    display: flex;    
+}
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 50%;
+    font-size: 30px;
+}
+.container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: white;
+    flex-direction: column;
+    font-weight: 300px;
+}
+
+.container .contactInfo .box .text h3 {
+    font-weight: 500px;
+    color: #00bcd4;
+
+}
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #ffff;
+}
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 14px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+    
+}
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactForm .inputBox textarea{
+    height: 100px;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #ffff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+@media (max-width: 991px)
+{
+    .contact{
+        padding: 50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .contactInfo{
+        margin-bottom: 40px;
+    }
+    .container .contactInfo{
+        width: 90%;
+    }
+    .contactForm{
+        width: 70%;
+    }
+}
+
+
+footer{
+    position: relative;
+    background: #3586ff;
+    min-height: 100px;
+    width: 100%;
+    padding: 20px 0px;
+    margin-top: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer .social_icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1px 0;
+    flex-wrap: wrap;
+    
+}
+footer .social_icon li{
+    list-style: none;
+}
+footer .social_icon li a{
+    font-size: 2em;
+    color: rgb(255, 230, 161);
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+
+}
+footer .social_icon li a:hover{
+    transform: translateY(-15px);
+}
+footer .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    
+}
+footer .menu li{
+    list-style: none;
+    
+}
+footer .menu li a{
+    font-size: 1em;
+    color: rgb(255, 230, 161);
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.80;
+}
+footer .menu li a:hover{
+    opacity: 1;
+}
+p{
+    color: #fff;
+    font-size: 0.8em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wave{
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: url(wave.png);
+    background-size: 1000px 40px;
+
+}
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 0.9;
+    bottom: 0;
+    animation: animateveWave 6s linear infinite;
+}
+@keyframes animateveWave {
+    0%{
+        background-position-x: 1000px;
+
+    }
+    100%{
+        background-position-x: 0px;
+    }
+}
+
+footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10;
+    animation: animateveWave_2 4s linear infinite;
+}
+@keyframes animateveWave_2 {
+    0%{
+        background-position-x: 0px;
+
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+footer .wave#wave3{
+    z-index: 999;
+    opacity: 0.2;
+    bottom: 20;
+    animation: animateveWave_2 5s linear infinite;
+}
+footer .wave#wave4{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 50;
+    animation: animateveWave_2 2s linear infinite;
+}
